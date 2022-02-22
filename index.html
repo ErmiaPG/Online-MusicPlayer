@@ -15,28 +15,10 @@
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: 100% 100%;
-            {
-                box-sizing: border-box;
-            }
-            .container {
-                width: 800px;
-            }
-            input {
-                width: 100%;
-                padding: 10px 15px;
-                margin: 0 0 15px 0;
-            }
-            button {
-                width: 100%;
-                background-color: blueviolet;
-                color: #fff;
-                font-weight: bold;
-                padding: 10px;
-            }
-            input:focus {
-                background-color: yellow;
-                border: 2px solid cornflowerblue;
-            }
+        }
+        
+        * {
+            box-sizing: border-box;
         }
     </style>
 </head>
@@ -53,7 +35,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="Login.html">Login / Sign up</a>
+                    <a class="nav-link" href="php/Login.php">Login / Sign up</a>
                     <li class="nav-item">
                         <a class="nav-link" href="Playlist.html">Playlist</a>
                     </li>
@@ -97,9 +79,73 @@
 
 
 
+    <!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
 
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
 
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
 
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+</head>
+<body>
+
+<h3>Contact Form</h3>
+
+<div class="container">
+  <form action="/action_page.php">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="australia">Turkey</option>
+      <option value="canada">Iran</option>
+      <option value="usa">USA</option>
+    </select>
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+</body>
+</html>
 </body>
 
 </html>
