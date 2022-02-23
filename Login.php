@@ -28,6 +28,7 @@ include("loginserv.php");
         .login {
             width: 360px;
             margin: 50px auto;
+            background-color: white;
             font: Cambria, "Hoefler Text", "Liberation Sherif", Times, "Times New Roman", serif;
             border-radius: 10px;
             border: 2px solid #ccc;
@@ -46,13 +47,19 @@ include("loginserv.php");
             font-family: Cambria, "Hoefler Text", "Liberation Sherif", Times, "Times New Roman", serif;
         }
         
-        button[name=submit-login] {
+        input[name=submit-login] {
             width: 100%;
             padding: 10px;
             font-size: 20px;
             cursor: pointer;
             border-radius: 5px;
             margin-bottom: 15px;
+        }
+
+        div[name=rememberme]{
+            width: 100%;
+            font-size: 15px;
+            font-family: Cambria, "Hoefler Text", "Liberation Sherif", Times, "Times New Roman", serif;
         }
     </style>
 </head>
@@ -95,14 +102,24 @@ include("loginserv.php");
         </div>
     </nav>
 
-
+    <br>
+    <br>
+    <br>
     <div class="login">
-        <h1 align="center" style="color: white">Login</h1>
-        <form action="/action_page.php" method="POST" style="text-align: center">
+        <h1 align="center" style="color: black">Login</h1>
+        <form action="" method="POST" style="text-align: center">
             <input type="text" id="user" name="user" required placeholder="username"><br><br>
             <input type="password" id="pass" name="pass" required placeholder="password"><br><br>
-            <button class="btn btn-success" type="submit" value="Login" name="submit-login">Login</button>
+            <div class="form-group">
+                <div class="custom-control custom-checkbox" name="rememberme" style="text-align: left">
+                    <input type="checkbox" name="rememberme" class="custom-control-input" id="customControlInline">
+                    <label name="rememberme" class="custom-control-label" for="customControlInline">Remember me</label>
+                </div>
+            </div> 
+            <input class="btn btn-success" type="submit" value="Login" name="submit-login">
             <span><?php echo $error; ?></span>
+            <br>
+            <a style="color: gray" font-size="12">Don't have an account?</a> <a href="SignUp.php" class="ml-2">Sign Up</a>
         </form>
     </div>
 
