@@ -9,7 +9,7 @@
         {
             $user=$_POST['user'];
             $pass=$_POST['pass'];
-            $conn = mysqli_connect("185.27.134.10", "root", "");
+            $conn = mysqli_connect("sql213.gigfa.com", "gigfa_30646934", "gnzq65fs", "gigfa_30646934_Online_Musicplayer");
             $db = mysqli_select_db($conn, "userpass");
             $query = mysqli_query($conn, "SELECT * FROM userpass WHERE pass='$pass' AND user='$user'");
 
@@ -24,23 +24,5 @@
         mysqli_close($conn);
         }
     }
-
-  /* $user = $pass = "";
-    if (isset($_POST['user']) and isset($_POST['pass'])){
-        $user = $_POST['user'];
-        $pass = $_POST['pass'];
-        function test_input($data) {
-            $data = trim($data);
-            $data = stripslashes($data);
-            $data = htmlspecialchars($data);
-            return $data;
-          }
-    echo $user;
-    }
-    $db = new mysqli("sql213.gigfa.com", "root", "", "hell");
-
-    $sql = "INSERT INTO users (id, username, password) VALUES(NULL, '$user', '$pass')";
-    $db->query($sql);*/
-
 
 ?>
